@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Lenda de Vox Machina</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+            text-align: left;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+
+        p {
+            text-indent: 30px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <h1>A Lenda de Vox Machina</h1>
+
+
+    <p>
+        A Lenda de Vox Machina é uma série animada de fantasia lançada em 2022.
+        A animação foi inspirada em uma campanha de RPG de mesa transmitida pela
+        internet pelo grupo Critical Role, formada por dubladores profissionais
+        que jogavam Dungeons & Dragons.
+    </p>
+
+
+    <p>
+        A história acompanha a equipe Vox Machina, um grupo de aventureiros
+        formado por Vex'ahlia, Vax'ildan, Percival de Rolo, Keyleth,
+        Pike Trickfoot, Scanlan Shorthalt e Grog Strongjaw. Apesar de seus
+        defeitos e conflitos, eles se unem para enfrentar grandes ameaças e
+        proteger o continente de Tal'Dorei.
+    </p>
+
+
+    <p>
+        Um dos principais acontecimentos da série é a libertação da cidade de
+        Whitestone. A cidade foi tomada por Sylas e Delilah Briarwood,
+        responsáveis pela morte da família de Percival de Rolo. Com a ajuda
+        de seus companheiros, Percy retorna à sua terra natal para derrotar os
+        governantes tirânicos e recuperar sua cidade.
+    </p>
+
+
+    <p>
+        Posteriormente, a Vox Machina enfrenta o Conclave Cromático, uma
+        poderosa aliança de quatro dragões que ataca diversas regiões e coloca
+        o continente em perigo. Para derrotá-los, o grupo embarca em uma
+        jornada para encontrar os Vestígios da Divergência, artefatos mágicos
+        capazes de aumentar seus poderes.
+    </p>
+
+
+    <p>
+        A série combina ação, humor, drama e fantasia, além de explorar temas
+        como amizade, coragem, sacrifício e superação.
+    </p>
+
+
+</body>
+</html>
