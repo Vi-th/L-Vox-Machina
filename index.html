@@ -23,23 +23,39 @@
     scroll-behavior:smooth;
 }
 
-body{
+<body>
 
-    font-family:'EB Garamond',serif;
-    color:#f2ece0;
+<header>
 
-    background:
-    linear-gradient(rgba(18,12,8,.88),rgba(18,12,8,.94)),
-    url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=2200&q=80");
+<div>
 
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
+<h1>A LENDA DE VOX MACHINA</h1>
 
-}
+<p>
+Crônicas preservadas pela Biblioteca de Emon • Reino de Tal'Dorei • Exandria
+</p>
 
-header{
+</div>
 
+</header>
+
+<nav>
+
+<a href="#exandria">Exandria</a>
+
+<a href="#taldorei">Tal'Dorei</a>
+
+<a href="#personagens">Vox Machina</a>
+
+<a href="#vestigios">Vestígios</a>
+
+<a href="#conclave">Conclave</a>
+
+<a href="#curiosidades">Curiosidades</a>
+
+</nav>
+
+<main>
     position:relative;
 
     height:600px;
@@ -116,6 +132,150 @@ font-size:1.5rem;
 color:#efe3c5;
 
 letter-spacing:3px;
+
+}
+    nav{
+
+position:sticky;
+top:0;
+
+display:flex;
+justify-content:center;
+align-items:center;
+gap:40px;
+
+padding:18px;
+
+background:rgba(20,12,8,.95);
+
+backdrop-filter:blur(12px);
+
+border-top:2px solid #8e6d3f;
+border-bottom:2px solid #8e6d3f;
+
+z-index:1000;
+
+}
+
+nav a{
+
+font-family:'Cinzel',serif;
+
+font-size:17px;
+
+color:#e8d49b;
+
+text-decoration:none;
+
+letter-spacing:1px;
+
+transition:.35s;
+
+position:relative;
+
+}
+
+nav a::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+bottom:-8px;
+
+width:0;
+height:2px;
+
+background:#e7c76b;
+
+transition:.35s;
+
+transform:translateX(-50%);
+
+}
+
+nav a:hover{
+
+color:white;
+
+}
+
+nav a:hover::after{
+
+width:100%;
+
+}
+    main{
+
+width:min(1250px,92%);
+
+margin:70px auto;
+
+padding:70px;
+
+background:rgba(15,12,10,.72);
+
+backdrop-filter:blur(10px);
+
+border:2px solid #8d6737;
+
+border-radius:18px;
+
+box-shadow:
+
+0 0 60px rgba(0,0,0,.55);
+
+}
+    section{
+
+margin:90px 0;
+
+}
+
+h2{
+
+font-family:'Cinzel',serif;
+
+font-size:2.8rem;
+
+text-align:center;
+
+color:#f1d48a;
+
+margin-bottom:35px;
+
+letter-spacing:2px;
+
+}
+
+h2::after{
+
+content:"";
+
+display:block;
+
+width:180px;
+
+height:3px;
+
+margin:18px auto;
+
+background:linear-gradient(to right,transparent,#caa65d,transparent);
+
+}
+
+p{
+
+font-size:22px;
+
+line-height:1.9;
+
+text-align:justify;
+
+color:#ece6d7;
+
+margin-bottom:28px;
 
 }
 
