@@ -30,8 +30,30 @@ header h1{
     5px 5px 5px black;
 };text-shadow:2px 2px 8px #000}
 header p{font-size:1.4rem}
-nav{position:sticky;top:0;background:#4b2f1d;padding:12px;text-align:center}
-nav a{color:#f5d98f;text-decoration:none;margin:0 12px;font-weight:bold}
+nav{
+position:sticky;
+top:0;
+background:#1d130d;
+padding:18px;
+border-top:2px solid #cba562;
+border-bottom:2px solid #cba562;
+backdrop-filter:blur(10px);
+z-index:999;
+}
+
+nav a{
+font-family:'Cinzel';
+color:#f8d98a;
+text-decoration:none;
+margin:0 25px;
+font-size:18px;
+transition:.3s;
+}
+
+nav a:hover{
+color:white;
+letter-spacing:2px;
+}
 main{
     max-width:1200px;
     margin:60px auto;
