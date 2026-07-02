@@ -70,9 +70,30 @@ main{
 h2{font-family:Cinzel,serif;border-bottom:2px solid #876235;padding-bottom:8px;color:#6d1a1a}
 .heroimg,.map{display:block;max-width:100%;margin:25px auto;border:5px solid #876235;border-radius:10px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.card{background:#f5ebd3;border:2px solid #876235;border-radius:10px;padding:15px;transition:.2s}
+.card{
+background:linear-gradient(#f7e8c6,#ead4a4);
+border:3px solid #876235;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 15px 35px rgba(0,0,0,.25);
+transition:.35s;
+}
+
+.card:hover{
+transform:translateY(-12px) scale(1.03);
+box-shadow:0 25px 50px rgba(0,0,0,.5);
+}
 .card:hover{transform:translateY(-4px)}
-.card img{width:100%;height:220px;object-fit:cover;border-radius:6px}
+.card img{
+width:100%;
+height:320px;
+object-fit:cover;
+transition:.4s;
+}
+
+.card:hover img{
+transform:scale(1.08);
+};border-radius:6px}
 footer{text-align:center;background:#4b2f1d;color:#f5d98f;padding:25px;margin-top:40px}
 </style>
 </head>
@@ -85,6 +106,34 @@ footer{text-align:center;background:#4b2f1d;color:#f5d98f;padding:25px;margin-to
 <a href="#taldorei">Tal'Dorei</a>
 <a href="#personagens">Personagens</a>
 <a href="#conclave">Conclave</a>
+    <section id="vestigios">
+
+<h2>Vestígios da Divergência</h2>
+
+<p>
+Forjados durante a Guerra da Divergência, os Vestígios são artefatos lendários criados pelos próprios deuses. Cada relíquia concede poderes extraordinários ao seu portador e representa um legado da batalha entre divindades e traidores.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<h3>Deathwalker's Ward</h3>
+<p>Armadura ligada à Matrona dos Corvos.</p>
+</div>
+
+<div class="card">
+<h3>Fenthras</h3>
+<p>Arco élfico capaz de atingir alvos a enormes distâncias.</p>
+</div>
+
+<div class="card">
+<h3>Titanstone Knuckles</h3>
+<p>Manoplas que ampliam a força física de Grog.</p>
+</div>
+
+</div>
+
+</section>
 <a href="#curiosidades">Curiosidades</a>
 </nav>
 <main>
