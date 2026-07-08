@@ -15,35 +15,61 @@ html{
 }
 
 body{
-    font-family:'EB Garamond',serif;
-    background:#120d08;
-    color:white;
+
+font-family:'EB Garamond',serif;
+
+background:
+
+radial-gradient(circle at top,#2a1a10,#120d08 70%);
+
+background-attachment:fixed;
+
+color:#f2eadb;
+
 }
      header{
-     
-    height:600px;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
+height:650px;
 
-    background:
-    linear-gradient(rgba(10,7,4,.55),rgba(10,7,4,.75)),
-    url("https://cdn.observatoriodocinema.com.br/2024/07/The_Legend_of_Vox_Machina-1024x576.jpg");
+display:flex;
 
-    background-size:cover;
-    background-position:center;
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+background:
+
+linear-gradient(rgba(10,7,4,.45),rgba(10,7,4,.82)),
+
+url("https://cdn.observatoriodocinema.com.br/2024/07/The_Legend_of_Vox_Machina-1024x576.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+position:relative;
+
 }
-     header h1{
-    font-family:'Cinzel',serif;
-    font-size:6rem;
-    color:#f5d891;
-    letter-spacing:10px;
-    text-shadow:
-    0 0 10px black,
-    0 0 25px black,
-    0 0 50px black;
+    header h1{
+
+font-family:'Cinzel',serif;
+
+font-size:6.5rem;
+
+letter-spacing:14px;
+
+color:#f8df9f;
+
+text-shadow:
+
+0 0 15px black,
+
+0 0 35px black,
+
+0 0 70px black;
+
 }
      header p{
     margin-top:20px;
@@ -102,28 +128,57 @@ body{
 }
 
 main{
-    width:1200px;
-    max-width:90%;
-    margin:60px auto;
-    padding:60px;
-    background:rgba(15,12,10,.75);
-    border:2px solid #8d6737;
-    border-radius:20px;
-    backdrop-filter:blur(8px);
-    box-shadow:0 0 40px rgba(0,0,0,.6);
+
+width:1200px;
+
+max-width:92%;
+
+margin:70px auto;
+
+padding:70px;
+
+background:
+
+linear-gradient(
+180deg,
+rgba(34,22,15,.92),
+rgba(17,11,8,.94)
+);
+
+border:2px solid #9f7642;
+
+border-radius:24px;
+
+box-shadow:
+
+0 0 80px rgba(0,0,0,.65),
+
+0 0 25px rgba(230,190,90,.08);
+
 }
     section{
     margin:80px 0;
 }
 
 h2{
-    font-family:'Cinzel',serif;
-    font-size:2.8rem;
-    color:#f5d891;
-    text-align:center;
-    margin-bottom:30px;
-}
 
+font-family:'Cinzel',serif;
+
+font-size:3rem;
+
+color:#f7d889;
+
+letter-spacing:3px;
+
+text-align:center;
+
+margin-bottom:35px;
+
+text-shadow:
+
+0 0 15px rgba(255,220,140,.25);
+
+}
 h2::after{
     content:"";
     display:block;
@@ -139,11 +194,27 @@ p{
     color:#ece6d7;
 }
     img{
+        
     display:block;
     width:100%;
     margin:35px auto;
     border-radius:12px;
     border:3px solid #8d6737;
+}
+    img{
+
+transition:.5s;
+
+}
+
+img:hover{
+
+transform:scale(1.02);
+
+box-shadow:
+
+0 0 35px rgba(255,214,120,.25);
+
 }
     .cards{
     display:grid;
@@ -151,31 +222,54 @@ p{
     gap:30px;
     margin-top:40px;
 }
- .card{
-    position:relative;
-    background:linear-gradient(180deg,#2b1b12,#18110d);
-    border:2px solid #a47a3d;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 12px 30px rgba(0,0,0,.55);
-    transition:.35s;
+.card{
+
+position:relative;
+
+background:linear-gradient(
+180deg,
+#2d1c12,
+#17110d
+);
+
+border:2px solid #9d7640;
+
+border-radius:18px;
+
+overflow:hidden;
+
+transition:.35s;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.55);
+
 }
 
 .card::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:5px;
-    background:linear-gradient(
-        to right,
-        #6e481d,
-        #d8bb73,
-        #fff1b6,
-        #d8bb73,
-        #6e481d
-    );
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:4px;
+
+background:
+
+linear-gradient(
+to right,
+#7b572b,
+#d8b870,
+#fff0ba,
+#d8b870,
+#7b572b
+);
+
 }
     position:relative;
     background:linear-gradient(180deg,#2b1b12,#18110d);
