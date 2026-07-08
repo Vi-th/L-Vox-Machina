@@ -151,21 +151,50 @@ p{
     gap:30px;
     margin-top:40px;
 }
-    .card{
-  fundo em degradê marrom bem escuro;
-  position:relative;
+   .card{
+       .card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:5px;
+    background:linear-gradient(
+        to right,
+        #6e481d,
+        #d8bb73,
+        #fff1b6,
+        #d8bb73,
+        #6e481d
+    );
 }
-    .card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 20px 35px rgba(0,0,0,.6);
+    position:relative;
+    background:linear-gradient(180deg,#2b1b12,#18110d);
+    border:2px solid #a47a3d;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 12px 30px rgba(0,0,0,.55);
+    transition:.35s;
 }
-    .card img{
+   .card:hover{
+    transform:translateY(-12px) scale(1.03);
+    border-color:#e0bd6d;
+    box-shadow:
+    0 25px 45px rgba(0,0,0,.7),
+    0 0 20px rgba(226,189,109,.25);
+}
+  .card img{
     width:100%;
     height:380px;
     object-fit:cover;
+    display:block;
     margin:0;
     border:none;
-    border-bottom:2px solid #8d6737;
+    border-bottom:2px solid #a47a3d;
+    transition:.45s;
+}
+    .card:hover img{
+    transform:scale(1.08);
 }
     .card h3{
     font-family:'Cinzel',serif;
@@ -324,6 +353,69 @@ Um bardo bem humorado.
 
 <p>
 Um grande guerreiro que portará as manoplas.
+</p>
+
+</div>
+
+</div>
+
+</section>
+    <section id="vestigios">
+
+<h2>Vestígios da Divergência</h2>
+
+<p>
+
+Os Vestígios da Divergência são artefatos lendários criados pelos deuses durante a Guerra da Divergência. Cada um concede poderes extraordinários ao seu portador e desempenhou um papel essencial na luta da Vox Machina contra o Conclave Cromático.
+
+</p>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="DeathwalkersWard.webp" alt="Deathwalker's Ward">
+
+<h3>Deathwalker's Ward</h3>
+
+<p>
+Armadura sagrada da Matrona dos Corvos utilizada por Vax'ildan.
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="Fenthras.webp" alt="Fenthras">
+
+<h3>Fenthras</h3>
+
+<p>
+Arco mágico utilizado por Vex'ahlia que dispara flechas encantadas.
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="TitanstoneKnuckles.webp" alt="Titanstone Knuckles">
+
+<h3>Titanstone Knuckles</h3>
+
+<p>
+Manoplas ancestrais que aumentam enormemente a força física de Grog.
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="Mythcarver.webp" alt="Mythcarver">
+
+<h3>Mythcarver</h3>
+
+<p>
+Espada lendária que amplifica o poder mágico e inspira aliados.
 </p>
 
 </div>
