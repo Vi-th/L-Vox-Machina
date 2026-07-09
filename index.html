@@ -44,6 +44,7 @@ background:
 linear-gradient(rgba(10,7,4,.45),rgba(10,7,4,.82)),
 
 url("https://cdn.observatoriodocinema.com.br/2024/07/The_Legend_of_Vox_Machina-1024x576.jpg");
+         
 
 background-size:cover;
 
@@ -190,11 +191,78 @@ box-shadow:
 }
    section{
 
-margin:110px 0;
+position:relative;
 
-padding-bottom:40px;
+margin:120px 0;
 
-border-bottom:1px solid rgba(202,166,93,.25);
+padding:60px;
+
+background:
+
+linear-gradient(
+180deg,
+rgba(47,31,20,.55),
+rgba(27,19,14,.35)
+);
+
+border:2px solid rgba(194,154,86,.35);
+
+border-radius:25px;
+
+box-shadow:
+
+0 0 40px rgba(0,0,0,.35),
+
+inset 0 0 40px rgba(255,220,120,.04);
+
+overflow:hidden;
+
+}
+
+section::before{
+
+content:"";
+
+position:absolute;
+
+top:12px;
+
+left:12px;
+
+right:12px;
+
+bottom:12px;
+
+border:1px solid rgba(235,200,120,.18);
+
+border-radius:18px;
+
+pointer-events:none;
+
+}
+
+section::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:0;
+
+width:100%;
+
+height:2px;
+
+background:
+
+linear-gradient(
+to right,
+transparent,
+#d7b66b,
+transparent
+);
 
 }
 
@@ -202,19 +270,31 @@ h2{
 
 font-family:'Cinzel',serif;
 
-font-size:3.2rem;
+font-size:3.5rem;
 
-letter-spacing:4px;
+letter-spacing:5px;
 
 text-align:center;
 
-color:#f6de9a;
+margin-bottom:45px;
 
-margin-bottom:40px;
+background:
+
+linear-gradient(
+180deg,
+#fff5c4,
+#f6db8c,
+#d29f3c,
+#fff1a8
+);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
 
 text-shadow:
 
-0 0 10px rgba(255,220,120,.2);
+0 0 15px rgba(255,220,120,.25);
 
 }
 h2::after{
@@ -334,11 +414,23 @@ to right,
     transition:.35s;
 }
    .card:hover{
-    transform:translateY(-12px) scale(1.03);
-    border-color:#e0bd6d;
-    box-shadow:
-    0 25px 45px rgba(0,0,0,.7),
-    0 0 20px rgba(226,189,109,.25);
+
+transform:
+
+translateY(-14px)
+
+scale(1.04)
+
+rotateX(3deg);
+
+border-color:#f2d78b;
+
+box-shadow:
+
+0 30px 60px rgba(0,0,0,.75),
+
+0 0 40px rgba(240,200,120,.25);
+
 }
   .card img{
     width:100%;
@@ -386,6 +478,61 @@ footer p{
     font-size:18px;
     text-align:center;
     color:#c9bfa8;
+}
+    .citacao{
+
+margin:70px auto;
+
+max-width:900px;
+
+padding:45px;
+
+background:
+
+linear-gradient(
+180deg,
+rgba(62,42,24,.65),
+rgba(33,22,15,.45)
+);
+
+border-left:8px solid #d5b46d;
+
+border-right:8px solid #d5b46d;
+
+border-radius:20px;
+
+font-size:32px;
+
+font-style:italic;
+
+text-align:center;
+
+color:#f7e8be;
+
+line-height:1.8;
+
+box-shadow:
+
+0 0 30px rgba(0,0,0,.35);
+
+}
+
+.citacao span{
+
+display:block;
+
+margin-top:25px;
+
+font-size:20px;
+
+letter-spacing:2px;
+
+font-style:normal;
+
+color:#dcbf82;
+
+font-family:'Cinzel',serif;
+
 }
 
 ul{
@@ -594,6 +741,17 @@ Exandria é um mundo de fantasia criado por Matthew Mercer para as campanhas de 
 </p>
 
 <img src="MapaExandria.webp" alt="Mapa de Exandria">
+        <div class="citacao">
+
+"A história jamais pertence aos reis, mas àqueles que tiveram coragem de desafiar dragões."
+
+<br><br>
+
+<span>
+— Arquivos Reais da Biblioteca de Emon
+</span>
+
+</div>
 
 </section>
     <section id="taldorei">
@@ -607,6 +765,71 @@ Tal'Dorei é um dos continentes mais importantes de Exandria. Suas cidades, cast
 </p>
 
 <img src="TalDorei.webp" alt="Continente de Tal'Dorei">
+
+</section>
+    <section id="reinos">
+
+<h2>Grandes Reinos de Tal'Dorei</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="Emon.webp">
+
+<h3>Emon</h3>
+
+<p>
+
+Capital de Tal'Dorei e maior cidade do continente. Abriga o Castelo de Emon e a famosa Biblioteca Real.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="Whitestone.webp">
+
+<h3>Whitestone</h3>
+
+<p>
+
+Cidade governada pela família de Percy. Tornou-se símbolo de resistência após derrotar os Briarwood.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="Westruun.webp">
+
+<h3>Westruun</h3>
+
+<p>
+
+Cidade guerreira que sofreu intensamente durante o ataque do Conclave Cromático.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<img src="Zephrah.webp">
+
+<h3>Zephrah</h3>
+
+<p>
+
+Lar dos Ashari do Ar e residência de Keyleth.
+
+</p>
+
+</div>
+
+</div>
 
 </section>
     <section id="personagens">
@@ -917,6 +1140,19 @@ Após inúmeras batalhas, a Vox Machina derrota o Conclave Cromático e salva Ta
 
 </div>
 </div>
+
+</div>
+
+</section>
+    <section>
+
+<div class="citacao">
+
+"A verdadeira força não nasce das armas, mas daqueles que escolhem proteger o mundo mesmo diante do impossível."
+
+<span>
+— Arquivos da Biblioteca de Emon
+</span>
 
 </div>
 
