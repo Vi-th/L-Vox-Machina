@@ -129,21 +129,53 @@ text-shadow:
 
 main{
 
-width:1200px;
+width:1250px;
 
 max-width:92%;
 
-margin:70px auto;
+margin:80px auto;
 
-padding:70px;
+padding:80px;
 
 background:
 
 linear-gradient(
 180deg,
-rgba(34,22,15,.92),
-rgba(17,11,8,.94)
+rgba(38,24,16,.96),
+rgba(22,15,11,.97)
 );
+
+border:3px solid #8d6737;
+
+border-radius:25px;
+
+box-shadow:
+0 0 80px rgba(0,0,0,.75),
+0 0 25px rgba(255,220,120,.12);
+
+position:relative;
+
+overflow:hidden;
+
+}
+    main::before{
+
+content:"";
+
+position:absolute;
+
+top:12px;
+left:12px;
+right:12px;
+bottom:12px;
+
+border:1px solid rgba(236,198,111,.35);
+
+border-radius:18px;
+
+pointer-events:none;
+
+}
 
 border:2px solid #9f7642;
 
@@ -156,42 +188,64 @@ box-shadow:
 0 0 25px rgba(230,190,90,.08);
 
 }
-    section{
-    margin:80px 0;
+   section{
+
+margin:110px 0;
+
+padding-bottom:40px;
+
+border-bottom:1px solid rgba(202,166,93,.25);
+
 }
 
 h2{
 
 font-family:'Cinzel',serif;
 
-font-size:3rem;
+font-size:3.2rem;
 
-color:#f7d889;
-
-letter-spacing:3px;
+letter-spacing:4px;
 
 text-align:center;
 
-margin-bottom:35px;
+color:#f6de9a;
+
+margin-bottom:40px;
 
 text-shadow:
 
-0 0 15px rgba(255,220,140,.25);
+0 0 10px rgba(255,220,120,.2);
 
 }
 h2::after{
-    content:"";
-    display:block;
-    width:180px;
-    height:3px;
-    background:#b88b4a;
-    margin:18px auto;
-}
 
+content:"✦";
+
+display:block;
+
+margin-top:18px;
+
+font-size:26px;
+
+color:#d6b468;
+
+letter-spacing:18px;
+
+}
 p{
-    font-size:22px;
-    line-height:1.8;
-    color:#ece6d7;
+
+font-size:22px;
+
+line-height:2;
+
+color:#ece6d7;
+
+text-align:justify;
+
+max-width:950px;
+
+margin:25px auto;
+
 }
     img{
         
@@ -344,6 +398,140 @@ li{
     margin:15px 0;
     color:#ece6d7;
 }
+    /* ===========================
+   LINHA DO TEMPO
+=========================== */
+
+.timeline{
+
+position:relative;
+
+margin-top:60px;
+
+padding-left:80px;
+
+}
+
+.timeline::before{
+
+content:"";
+
+position:absolute;
+
+left:28px;
+
+top:0;
+
+bottom:0;
+
+width:5px;
+
+background:linear-gradient(
+to bottom,
+#fff4c3,
+#d9b56c,
+#8d6737
+);
+
+border-radius:10px;
+
+}
+
+.evento{
+
+position:relative;
+
+margin-bottom:55px;
+
+}
+
+.ano{
+
+position:absolute;
+
+left:-80px;
+
+width:55px;
+
+height:55px;
+
+border-radius:50%;
+
+background:linear-gradient(
+180deg,
+#f8e2a3,
+#b88b4a
+);
+
+border:3px solid #fff2c2;
+
+color:#2a180d;
+
+font-family:'Cinzel',serif;
+
+font-size:24px;
+
+font-weight:bold;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+box-shadow:0 0 20px rgba(255,220,140,.5);
+
+}
+
+.conteudo{
+
+background:linear-gradient(
+180deg,
+#2d1b12,
+#1a120d
+);
+
+border:2px solid #9f7640;
+
+padding:25px;
+
+border-radius:15px;
+
+transition:.35s;
+
+}
+
+.conteudo:hover{
+
+transform:translateX(12px);
+
+border-color:#e4c57a;
+
+box-shadow:
+
+0 0 30px rgba(230,190,110,.25);
+
+}
+
+.conteudo h3{
+
+font-family:'Cinzel',serif;
+
+font-size:28px;
+
+margin-bottom:12px;
+
+color:#f7d992;
+
+}
+
+.conteudo p{
+
+font-size:19px;
+
+margin:0;
+
+}
 
 </style>
 
@@ -379,10 +567,22 @@ Crônicas preservadas pela Biblioteca de Emon
 <a href="#conclave">Conclave</a>
 
 <a href="#curiosidades">Curiosidades</a>
+<a href="#linha-tempo">Linha do Tempo</a>
 
 </nav>
 
 <main>
+    <section>
+
+<h2>Os Arquivos da Biblioteca de Emon</h2>
+
+<p>
+
+Entre os inúmeros tomos preservados pela Biblioteca Real de Emon encontra-se um registro dedicado aos lendários heróis conhecidos como Vox Machina. Estas páginas narram a história de Exandria, seus continentes, seus campeões, os Vestígios da Divergência e a guerra contra o terrível Conclave Cromático.
+
+</p>
+
+</section>
     <section id="exandria">
 
 <h2>Exandria</h2>
@@ -637,6 +837,86 @@ O Dragão Negro conhecido por sua força e por acumular tesouros imensos.
 </div>
 
 </section>
+
+</div>
+
+</section>
+    <section id="linha-tempo">
+
+<h2>Linha do Tempo</h2>
+
+<p>
+
+Os acontecimentos abaixo resumem os principais eventos da jornada da Vox Machina.
+
+</p>
+
+<div class="timeline">
+
+<div class="evento">
+<div class="ano">1</div>
+
+<div class="conteudo">
+<h3>Formação da Vox Machina</h3>
+
+<p>
+O grupo de aventureiros passa a trabalhar junto e aceita missões por todo Tal'Dorei.
+</p>
+
+</div>
+</div>
+
+<div class="evento">
+<div class="ano">2</div>
+
+<div class="conteudo">
+<h3>Os Briarwood</h3>
+
+<p>
+Percy retorna para Whitestone e enfrenta Lord e Lady Briarwood ao lado de seus amigos.
+</p>
+
+</div>
+</div>
+
+<div class="evento">
+<div class="ano">3</div>
+
+<div class="conteudo">
+<h3>Conclave Cromático</h3>
+
+<p>
+Quatro dragões ancestrais conquistam Tal'Dorei e obrigam a Vox Machina a procurar os Vestígios da Divergência.
+</p>
+
+</div>
+</div>
+
+<div class="evento">
+<div class="ano">4</div>
+
+<div class="conteudo">
+<h3>Caçada aos Vestígios</h3>
+
+<p>
+Cada membro conquista artefatos lendários capazes de enfrentar os dragões.
+</p>
+
+</div>
+</div>
+
+<div class="evento">
+<div class="ano">5</div>
+
+<div class="conteudo">
+<h3>Batalha Final</h3>
+
+<p>
+Após inúmeras batalhas, a Vox Machina derrota o Conclave Cromático e salva Tal'Dorei.
+</p>
+
+</div>
+</div>
 
 </div>
 
