@@ -1,1181 +1,715 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Lenda de Vox Machina</title>
 <style>
-     *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
-
 html{
-    scroll-behavior:smooth;
+  scroll-behavior:smooth;
+  overflow-x:hidden;
+  width:100%;
 }
-
 body{
-
-font-family:'EB Garamond',serif;
-
-background:
-
-radial-gradient(circle at top,#2a1a10,#120d08 70%);
-
-background-attachment:fixed;
-
-color:#f2eadb;
-
+  overflow-x:hidden;
+  width:100%;
+  font-family:'EB Garamond',serif;
+  background:
+    radial-gradient(circle at top,#2a1a10,#120d08 70%);
+  background-attachment:fixed;
+  color:#f2eadb;
 }
-     header{
-
-height:650px;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-text-align:center;
-
-background:
-
-linear-gradient(rgba(10,7,4,.45),rgba(10,7,4,.82)),
-
-url("https://cdn.observatoriodocinema.com.br/2024/07/The_Legend_of_Vox_Machina-1024x576.jpg");
-         
-
-background-size:cover;
-
-background-position:center;
-
-position:relative;
-
+header{
+  min-height:70vh;
+  height:auto;
+  padding:40px 20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background:
+    linear-gradient(rgba(10,7,4,.45),rgba(10,7,4,.82)),
+    url("https://cdn.observatoriodocinema.com.br/2024/07/The_Legend_of_Vox_Machina-1024x576.jpg");
+  background-size:cover;
+  background-position:center;
+  position:relative;
 }
-    header h1{
-
-font-family:'Cinzel',serif;
-
-font-size:6.5rem;
-
-letter-spacing:14px;
-
-color:#f8df9f;
-
-text-shadow:
-
-0 0 15px black,
-
-0 0 35px black,
-
-0 0 70px black;
-
+header h1{
+  font-family:'Cinzel',serif;
+  font-size:clamp(2.2rem,7vw,6.5rem);
+  letter-spacing:clamp(3px,1.2vw,14px);
+  color:#f8df9f;
+  line-height:1.15;
+  text-shadow:
+    0 0 15px black,
+    0 0 35px black,
+    0 0 70px black;
 }
-     header p{
-    margin-top:20px;
-    font-size:1.4rem;
-    color:#eee0bc;
+header p{
+  margin-top:20px;
+  font-size:clamp(1rem,2.4vw,1.4rem);
+  color:#eee0bc;
+  padding:0 10px;
 }
-     nav{
-    position:sticky;
-    top:0;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:40px;
-
-    padding:18px;
-
-    background:rgba(20,12,8,.95);
-
-    backdrop-filter:blur(12px);
-
-    border-top:2px solid #8d6737;
-    border-bottom:2px solid #8d6737;
-
-    z-index:1000;
+nav{
+  position:sticky;
+  top:0;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  gap:clamp(12px,3vw,40px);
+  row-gap:10px;
+  padding:14px 16px;
+  background:rgba(20,12,8,.95);
+  backdrop-filter:blur(12px);
+  border-top:2px solid #8d6737;
+  border-bottom:2px solid #8d6737;
+  z-index:1000;
+  width:100%;
 }
-     nav a{
-    font-family:'Cinzel',serif;
-    color:#f2d78b;
-    text-decoration:none;
-    font-size:18px;
-    letter-spacing:1px;
-    transition:.3s;
+nav a{
+  font-family:'Cinzel',serif;
+  color:#f2d78b;
+  text-decoration:none;
+  font-size:clamp(13px,1.6vw,18px);
+  letter-spacing:1px;
+  white-space:nowrap;
+  transition:.3s;
 }
-     nav a:hover{
-    color:white;
+nav a:hover{
+  color:white;
 }
-     nav a::after{
-    content:"";
-
-    display:block;
-
-    width:0;
-
-    height:2px;
-
-    margin:auto;
-    margin-top:6px;
-
-    background:#d9b56c;
-
-    transition:.3s;
+nav a::after{
+  content:"";
+  display:block;
+  width:0;
+  height:2px;
+  margin:auto;
+  margin-top:6px;
+  background:#d9b56c;
+  transition:.3s;
 }
-     nav a:hover::after{
-    width:100%;
+nav a:hover::after{
+  width:100%;
 }
-
 main{
-
-width:1250px;
-
-max-width:92%;
-
-margin:80px auto;
-
-padding:80px;
-
-background:
-
-linear-gradient(
-180deg,
-rgba(38,24,16,.96),
-rgba(22,15,11,.97)
-);
-
-border:3px solid #8d6737;
-
-border-radius:25px;
-
-box-shadow:
-0 0 80px rgba(0,0,0,.75),
-0 0 25px rgba(255,220,120,.12);
-
-position:relative;
-
-overflow:hidden;
-
+  width:100%;
+  max-width:1250px;
+  margin:clamp(30px,6vw,80px) auto;
+  padding:clamp(20px,6vw,80px);
+  background:
+    linear-gradient(180deg,
+      rgba(38,24,16,.96),
+      rgba(22,15,11,.97)
+    );
+  border:3px solid #8d6737;
+  border-radius:25px;
+  box-shadow:
+    0 0 80px rgba(0,0,0,.75),
+    0 0 25px rgba(255,220,120,.12);
+  position:relative;
+  overflow:hidden;
 }
-    main::before{
-
-content:"";
-
-position:absolute;
-
-top:12px;
-left:12px;
-right:12px;
-bottom:12px;
-
-border:1px solid rgba(236,198,111,.35);
-
-border-radius:18px;
-
-pointer-events:none;
-
+main::before{
+  content:"";
+  position:absolute;
+  top:12px;
+  left:12px;
+  right:12px;
+  bottom:12px;
+  border:1px solid rgba(236,198,111,.35);
+  border-radius:18px;
+  pointer-events:none;
 }
-
-border:2px solid #9f7642;
-
-border-radius:24px;
-
-box-shadow:
-
-0 0 80px rgba(0,0,0,.65),
-
-0 0 25px rgba(230,190,90,.08);
-
+section{
+  position:relative;
+  margin:clamp(50px,10vw,120px) 0;
+  padding:clamp(24px,5vw,60px);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(47,31,20,.55),
+      rgba(27,19,14,.35)
+    );
+  border:2px solid rgba(194,154,86,.35);
+  border-radius:25px;
+  box-shadow:
+    0 0 40px rgba(0,0,0,.35),
+    inset 0 0 40px rgba(255,220,120,.04);
+  overflow:hidden;
 }
-   section{
-
-position:relative;
-
-margin:120px 0;
-
-padding:60px;
-
-background:
-
-linear-gradient(
-180deg,
-rgba(47,31,20,.55),
-rgba(27,19,14,.35)
-);
-
-border:2px solid rgba(194,154,86,.35);
-
-border-radius:25px;
-
-box-shadow:
-
-0 0 40px rgba(0,0,0,.35),
-
-inset 0 0 40px rgba(255,220,120,.04);
-
-overflow:hidden;
-
-}
-
 section::before{
-
-content:"";
-
-position:absolute;
-
-top:12px;
-
-left:12px;
-
-right:12px;
-
-bottom:12px;
-
-border:1px solid rgba(235,200,120,.18);
-
-border-radius:18px;
-
-pointer-events:none;
-
+  content:"";
+  position:absolute;
+  top:12px;
+  left:12px;
+  right:12px;
+  bottom:12px;
+  border:1px solid rgba(235,200,120,.18);
+  border-radius:18px;
+  pointer-events:none;
 }
-
 section::after{
-
-content:"";
-
-position:absolute;
-
-left:0;
-
-bottom:0;
-
-width:100%;
-
-height:2px;
-
-background:
-
-linear-gradient(
-to right,
-transparent,
-#d7b66b,
-transparent
-);
-
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:100%;
+  height:2px;
+  background:
+    linear-gradient(
+      to right,
+      transparent,
+      #d7b66b,
+      transparent
+    );
 }
-
 h2{
-
-font-family:'Cinzel',serif;
-
-font-size:3.5rem;
-
-letter-spacing:5px;
-
-text-align:center;
-
-margin-bottom:45px;
-
-background:
-
-linear-gradient(
-180deg,
-#fff5c4,
-#f6db8c,
-#d29f3c,
-#fff1a8
-);
-
--webkit-background-clip:text;
-
--webkit-text-fill-color:transparent;
-
-text-shadow:
-
-0 0 15px rgba(255,220,120,.25);
-
+  font-family:'Cinzel',serif;
+  font-size:clamp(1.8rem,5vw,3.5rem);
+  letter-spacing:clamp(1px,0.8vw,5px);
+  text-align:center;
+  margin-bottom:clamp(24px,4vw,45px);
+  background:
+    linear-gradient(
+      180deg,
+      #fff5c4,
+      #f6db8c,
+      #d29f3c,
+      #fff1a8
+    );
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow:
+    0 0 15px rgba(255,220,120,.25);
 }
 h2::after{
-
-content:"✦";
-
-display:block;
-
-margin-top:18px;
-
-font-size:26px;
-
-color:#d6b468;
-
-letter-spacing:18px;
-
+  content:"✦";
+  display:block;
+  margin-top:18px;
+  font-size:26px;
+  color:#d6b468;
+  letter-spacing:18px;
 }
 p{
-
-font-size:22px;
-
-line-height:2;
-
-color:#ece6d7;
-
-text-align:justify;
-
-max-width:950px;
-
-margin:25px auto;
-
+  font-size:clamp(16px,2vw,22px);
+  line-height:1.9;
+  color:#ece6d7;
+  text-align:justify;
+  max-width:950px;
+  margin:25px auto;
 }
-    img{
-        
-    display:block;
-    width:100%;
-    margin:35px auto;
-    border-radius:12px;
-    border:3px solid #8d6737;
+img{
+  display:block;
+  width:100%;
+  margin:35px auto;
+  border-radius:12px;
+  border:3px solid #8d6737;
+  transition:.5s;
 }
-    img{
-
-transition:.5s;
-
-}
-
 img:hover{
-
-transform:scale(1.02);
-
-box-shadow:
-
-0 0 35px rgba(255,214,120,.25);
-
+  transform:scale(1.02);
+  box-shadow:
+    0 0 35px rgba(255,214,120,.25);
 }
-    .cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:30px;
-    margin-top:40px;
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));
+  gap:30px;
+  margin-top:40px;
+  width:100%;
 }
 .card{
-
-    position:relative;
-
-    background:linear-gradient(
+  position:relative;
+  background:linear-gradient(
     180deg,
     #2d1c12,
     #17110d
-    );
-
-    border:2px solid #9d7640;
-
-    border-radius:18px;
-
-    overflow:hidden;
-
-    transition:.35s;
-
-    box-shadow:
+  );
+  border:2px solid #9d7640;
+  border-radius:18px;
+  overflow:hidden;
+  transition:.35s;
+  box-shadow:
     0 10px 30px rgba(0,0,0,.55);
-
 }
-
-border:2px solid #9d7640;
-
-border-radius:18px;
-
-overflow:hidden;
-
-transition:.35s;
-
-box-shadow:
-0 10px 30px rgba(0,0,0,.55);
-
-}
-
 .card::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    height:4px;
-
-    background:linear-gradient(
-        to right,
-        #7b572b,
-        #d8b870,
-        #fff0ba,
-        #d8b870,
-        #7b572b
-    );
-
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:4px;
+  background:linear-gradient(
+    to right,
+    #7b572b,
+    #d8b870,
+    #fff0ba,
+    #d8b870,
+    #7b572b
+  );
 }
-   .card:hover{
-
-transform:
-
-translateY(-14px)
-
-scale(1.04)
-
-rotateX(3deg);
-
-border-color:#f2d78b;
-
-box-shadow:
-
-0 30px 60px rgba(0,0,0,.75),
-
-0 0 40px rgba(240,200,120,.25);
-
+.card:hover{
+  transform:
+    translateY(-14px)
+    scale(1.04)
+    rotateX(3deg);
+  border-color:#f2d78b;
+  box-shadow:
+    0 30px 60px rgba(0,0,0,.75),
+    0 0 40px rgba(240,200,120,.25);
 }
-  .card img{
-    width:100%;
-    height:380px;
-    object-fit:cover;
-    display:block;
-    margin:0;
-    border:none;
-    border-bottom:2px solid #a47a3d;
-    transition:.45s;
+.card img{
+  width:100%;
+  height:clamp(220px,32vw,380px);
+  object-fit:cover;
+  display:block;
+  margin:0;
+  border:none;
+  border-bottom:2px solid #a47a3d;
+  transition:.45s;
 }
-    .card:hover img{
-    transform:scale(1.08);
+.card:hover img{
+  transform:scale(1.08);
 }
-    .card h3{
-    font-family:'Cinzel',serif;
-    color:#f5d891;
-    text-align:center;
-    margin:20px;
-    letter-spacing:2px;
-    text-shadow:0 0 8px rgba(255,215,120,.35);
+.card h3{
+  font-family:'Cinzel',serif;
+  color:#f5d891;
+  text-align:center;
+  margin:20px;
+  letter-spacing:2px;
+  text-shadow:0 0 8px rgba(255,215,120,.35);
 }
-    .card p{
-    padding:0 20px 25px;
-    font-size:18px;
-    line-height:1.6;
-    text-align:center;
+.card p{
+  padding:0 20px 25px;
+  font-size:18px;
+  line-height:1.6;
+  text-align:center;
 }
-    footer{
-    margin-top:80px;
-    padding:45px;
-    text-align:center;
-    background:#0f0907;
-    border-top:3px solid #8d6737;
+footer{
+  margin-top:clamp(40px,8vw,80px);
+  padding:clamp(24px,5vw,45px);
+  text-align:center;
+  background:#0f0907;
+  border-top:3px solid #8d6737;
 }
-
 footer h3{
-    font-family:'Cinzel',serif;
-    color:#f5d891;
-    font-size:28px;
-    margin-bottom:20px;
+  font-family:'Cinzel',serif;
+  color:#f5d891;
+  font-size:clamp(20px,3vw,28px);
+  margin-bottom:20px;
 }
-
 footer p{
-    font-size:18px;
-    text-align:center;
-    color:#c9bfa8;
+  font-size:clamp(14px,2vw,18px);
+  text-align:center;
+  color:#c9bfa8;
 }
-    .citacao{
-
-margin:70px auto;
-
-max-width:900px;
-
-padding:45px;
-
-background:
-
-linear-gradient(
-180deg,
-rgba(62,42,24,.65),
-rgba(33,22,15,.45)
-);
-
-border-left:8px solid #d5b46d;
-
-border-right:8px solid #d5b46d;
-
-border-radius:20px;
-
-font-size:32px;
-
-font-style:italic;
-
-text-align:center;
-
-color:#f7e8be;
-
-line-height:1.8;
-
-box-shadow:
-
-0 0 30px rgba(0,0,0,.35);
-
+.citacao{
+  margin:clamp(30px,7vw,70px) auto;
+  max-width:900px;
+  padding:clamp(20px,5vw,45px);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(62,42,24,.65),
+      rgba(33,22,15,.45)
+    );
+  border-left:8px solid #d5b46d;
+  border-right:8px solid #d5b46d;
+  border-radius:20px;
+  font-size:clamp(18px,3.4vw,32px);
+  font-style:italic;
+  text-align:center;
+  color:#f7e8be;
+  line-height:1.8;
+  box-shadow:
+    0 0 30px rgba(0,0,0,.35);
 }
-
 .citacao span{
-
-display:block;
-
-margin-top:25px;
-
-font-size:20px;
-
-letter-spacing:2px;
-
-font-style:normal;
-
-color:#dcbf82;
-
-font-family:'Cinzel',serif;
-
+  display:block;
+  margin-top:25px;
+  font-size:clamp(14px,2vw,20px);
+  letter-spacing:2px;
+  font-style:normal;
+  color:#dcbf82;
+  font-family:'Cinzel',serif;
 }
-
 ul{
-    margin-top:30px;
-    padding-left:35px;
+  margin-top:30px;
+  padding-left:35px;
 }
-
 li{
-    font-size:20px;
-    margin:15px 0;
-    color:#ece6d7;
+  font-size:20px;
+  margin:15px 0;
+  color:#ece6d7;
 }
-    /* ===========================
+/* ===========================
    LINHA DO TEMPO
 =========================== */
-
 .timeline{
-
-position:relative;
-
-margin-top:60px;
-
-padding-left:80px;
-
+  position:relative;
+  margin-top:60px;
+  padding-left:clamp(50px,10vw,80px);
 }
-
 .timeline::before{
-
-content:"";
-
-position:absolute;
-
-left:28px;
-
-top:0;
-
-bottom:0;
-
-width:5px;
-
-background:linear-gradient(
-to bottom,
-#fff4c3,
-#d9b56c,
-#8d6737
-);
-
-border-radius:10px;
-
+  content:"";
+  position:absolute;
+  left:clamp(16px,3vw,28px);
+  top:0;
+  bottom:0;
+  width:5px;
+  background:linear-gradient(
+    to bottom,
+    #fff4c3,
+    #d9b56c,
+    #8d6737
+  );
+  border-radius:10px;
 }
-
 .evento{
-
-position:relative;
-
-margin-bottom:55px;
-
+  position:relative;
+  margin-bottom:55px;
 }
-
 .ano{
-
-position:absolute;
-
-left:-80px;
-
-width:55px;
-
-height:55px;
-
-border-radius:50%;
-
-background:linear-gradient(
-180deg,
-#f8e2a3,
-#b88b4a
-);
-
-border:3px solid #fff2c2;
-
-color:#2a180d;
-
-font-family:'Cinzel',serif;
-
-font-size:24px;
-
-font-weight:bold;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-box-shadow:0 0 20px rgba(255,220,140,.5);
-
+  position:absolute;
+  left:clamp(-50px,-10vw,-80px);
+  width:clamp(38px,8vw,55px);
+  height:clamp(38px,8vw,55px);
+  border-radius:50%;
+  background:linear-gradient(
+    180deg,
+    #f8e2a3,
+    #b88b4a
+  );
+  border:3px solid #fff2c2;
+  color:#2a180d;
+  font-family:'Cinzel',serif;
+  font-size:clamp(16px,2.4vw,24px);
+  font-weight:bold;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  box-shadow:0 0 20px rgba(255,220,140,.5);
 }
-
 .conteudo{
-
-background:linear-gradient(
-180deg,
-#2d1b12,
-#1a120d
-);
-
-border:2px solid #9f7640;
-
-padding:25px;
-
-border-radius:15px;
-
-transition:.35s;
-
+  background:linear-gradient(
+    180deg,
+    #2d1b12,
+    #1a120d
+  );
+  border:2px solid #9f7640;
+  padding:25px;
+  border-radius:15px;
+  transition:.35s;
 }
-
 .conteudo:hover{
-
-transform:translateX(12px);
-
-border-color:#e4c57a;
-
-box-shadow:
-
-0 0 30px rgba(230,190,110,.25);
-
+  transform:translateX(12px);
+  border-color:#e4c57a;
+  box-shadow:
+    0 0 30px rgba(230,190,110,.25);
 }
-
 .conteudo h3{
-
-font-family:'Cinzel',serif;
-
-font-size:28px;
-
-margin-bottom:12px;
-
-color:#f7d992;
-
+  font-family:'Cinzel',serif;
+  font-size:28px;
+  margin-bottom:12px;
+  color:#f7d992;
 }
-
 .conteudo p{
-
-font-size:19px;
-
-margin:0;
-
+  font-size:clamp(15px,2vw,19px);
+  margin:0;
 }
 
+/* ===========================
+   RESPONSIVO
+=========================== */
+@media (max-width:640px){
+  .cards{
+    grid-template-columns:1fr;
+  }
+  main{
+    border-radius:16px;
+  }
+  section{
+    border-radius:16px;
+  }
+  .citacao{
+    border-left-width:5px;
+    border-right-width:5px;
+  }
+  .conteudo:hover{
+    transform:none;
+  }
+  .card:hover{
+    transform:translateY(-6px);
+  }
+}
+
+@media (max-width:400px){
+  header h1{
+    letter-spacing:2px;
+  }
+}
 </style>
-
-
 </head>
-
 <body>
 
 <header>
-
-<div>
-
-<h1>A LENDA DE VOX MACHINA</h1>
-
-<p>
-Crônicas preservadas pela Biblioteca de Emon
-</p>
-
-</div>
-
+  <div>
+    <h1>A LENDA DE VOX MACHINA</h1>
+    <p>Crônicas preservadas pela Biblioteca de Emon</p>
+  </div>
 </header>
 
 <nav>
-
-<a href="#exandria">Exandria</a>
-
-<a href="#taldorei">Tal'Dorei</a>
-
-<a href="#personagens">Vox Machina</a>
-
-<a href="#vestigios">Vestígios</a>
-
-<a href="#conclave">Conclave</a>
-
-<a href="#curiosidades">Curiosidades</a>
-<a href="#linha-tempo">Linha do Tempo</a>
-
+  <a href="#exandria">Exandria</a>
+  <a href="#taldorei">Tal'Dorei</a>
+  <a href="#personagens">Vox Machina</a>
+  <a href="#vestigios">Vestígios</a>
+  <a href="#conclave">Conclave</a>
+  <a href="#curiosidades">Curiosidades</a>
+  <a href="#linha-tempo">Linha do Tempo</a>
 </nav>
 
 <main>
-    <section>
 
-<h2>Os Arquivos da Biblioteca de Emon</h2>
+  <section>
+    <h2>Os Arquivos da Biblioteca de Emon</h2>
+    <p>
+      Entre os inúmeros tomos preservados pela Biblioteca Real de Emon encontra-se um registro
+      dedicado aos lendários heróis conhecidos como Vox Machina. Estas páginas narram a
+      história de Exandria, seus continentes, seus campeões, os Vestígios da Divergência e a
+      guerra contra o terrível Conclave Cromático.
+    </p>
+  </section>
 
-<p>
+  <section id="exandria">
+    <h2>Exandria</h2>
+    <p>
+      Exandria é um mundo de fantasia criado por Matthew Mercer para as campanhas de Critical
+      Role. O continente de Tal'Dorei abriga reinos antigos, florestas encantadas, cidades
+      monumentais, deuses, criaturas mágicas e alguns dos heróis mais famosos do mundo.
+    </p>
+    <img src="MapaExandria.webp" alt="Mapa de Exandria">
+    <div class="citacao">
+      "A história jamais pertence aos reis, mas àqueles que tiveram coragem de desafiar dragões."
+      <span>— Arquivos Reais da Biblioteca de Emon</span>
+    </div>
+  </section>
 
-Entre os inúmeros tomos preservados pela Biblioteca Real de Emon encontra-se um registro dedicado aos lendários heróis conhecidos como Vox Machina. Estas páginas narram a história de Exandria, seus continentes, seus campeões, os Vestígios da Divergência e a guerra contra o terrível Conclave Cromático.
+  <section id="taldorei">
+    <h2>Tal'Dorei</h2>
+    <p>
+      Tal'Dorei é um dos continentes mais importantes de Exandria. Suas cidades, castelos,
+      montanhas e florestas foram palco das maiores aventuras da Vox Machina. Entre seus
+      locais mais famosos estão Emon, Whitestone, Westruun e Zephrah.
+    </p>
+    <img src="TalDorei.webp" alt="Continente de Tal'Dorei">
+  </section>
 
-</p>
+  <section id="reinos">
+    <h2>Grandes Reinos de Tal'Dorei</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="Emon.webp" alt="Emon">
+        <h3>Emon</h3>
+        <p>Capital de Tal'Dorei e maior cidade do continente. Abriga o Castelo de Emon e a famosa Biblioteca Real.</p>
+      </div>
+      <div class="card">
+        <img src="Whitestone.webp" alt="Whitestone">
+        <h3>Whitestone</h3>
+        <p>Cidade governada pela família de Percy. Tornou-se símbolo de resistência após derrotar os Briarwood.</p>
+      </div>
+      <div class="card">
+        <img src="Westruun.webp" alt="Westruun">
+        <h3>Westruun</h3>
+        <p>Cidade guerreira que sofreu intensamente durante o ataque do Conclave Cromático.</p>
+      </div>
+      <div class="card">
+        <img src="Zephrah.webp" alt="Zephrah">
+        <h3>Zephrah</h3>
+        <p>Lar dos Ashari do Ar e residência de Keyleth.</p>
+      </div>
+    </div>
+  </section>
 
-</section>
-    <section id="exandria">
+  <section id="personagens">
+    <h2>Vox Machina</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="imagens/vexahlia.jpg" alt="Vex'ahlia">
+        <h3>Vex'ahlia</h3>
+        <p>Caçadora, arqueira e uma das fundadoras da Vox Machina.</p>
+      </div>
+      <div class="card">
+        <img src="imagens/vaxildan.jpg" alt="Vax'ildan">
+        <h3>Vax'ildan</h3>
+        <p>Ladino extremamente rápido e irmão gêmeo de Vex.</p>
+      </div>
+      <div class="card">
+        <img src="Keyleth2.png" alt="Keyleth">
+        <h3>Keyleth</h3>
+        <p>Druida dos Ashari que domina os elementos da natureza.</p>
+      </div>
+      <div class="card">
+        <img src="imagens/percy.jpg" alt="Percy">
+        <h3>Percy</h3>
+        <p>Lorde de Whithestone.</p>
+      </div>
+      <div class="card">
+        <img src="imagens/pike.jpg" alt="Pike">
+        <h3>Pike</h3>
+        <p>Clériga do Vox Machina.</p>
+      </div>
+      <div class="card">
+        <img src="imagens/scanlan.jpg" alt="Scanlan">
+        <h3>Scanlan</h3>
+        <p>Um bardo bem humorado.</p>
+      </div>
+      <div class="card">
+        <img src="imagens/grog.jpg" alt="Grog">
+        <h3>Grog</h3>
+        <p>Um grande guerreiro que portará as manoplas.</p>
+      </div>
+    </div>
+  </section>
 
-<h2>Exandria</h2>
+  <section id="vestigios">
+    <h2>Vestígios da Divergência</h2>
+    <p>
+      Os Vestígios da Divergência são artefatos lendários criados pelos deuses durante a Guerra
+      da Divergência. Cada um concede poderes extraordinários ao seu portador e desempenhou
+      um papel essencial na luta da Vox Machina contra o Conclave Cromático.
+    </p>
+    <div class="cards">
+      <div class="card">
+        <img src="DeathwalkersWard.webp" alt="Deathwalker's Ward">
+        <h3>Deathwalker's Ward</h3>
+        <p>Armadura sagrada da Matrona dos Corvos utilizada por Vax'ildan.</p>
+      </div>
+      <div class="card">
+        <img src="Fenthras.webp" alt="Fenthras">
+        <h3>Fenthras</h3>
+        <p>Arco mágico utilizado por Vex'ahlia que dispara flechas encantadas.</p>
+      </div>
+      <div class="card">
+        <img src="TitanstoneKnuckles.webp" alt="Titanstone Knuckles">
+        <h3>Titanstone Knuckles</h3>
+        <p>Manoplas ancestrais que aumentam enormemente a força física de Grog.</p>
+      </div>
+      <div class="card">
+        <img src="Mythcarver.webp" alt="Mythcarver">
+        <h3>Mythcarver</h3>
+        <p>Espada lendária que amplifica o poder mágico e inspira aliados.</p>
+      </div>
+    </div>
+  </section>
 
-<p>
+  <section id="conclave">
+    <h2>Conclave Cromático</h2>
+    <p>
+      Após a queda dos Briarwood, quatro dragões ancestrais atacam Tal'Dorei ao mesmo tempo.
+      Unidos sob o nome de Conclave Cromático, eles conquistam cidades inteiras e quase
+      destroem Exandria.
+    </p>
+    <div class="cards">
+      <div class="card">
+        <img src="Thordak.webp" alt="Thordak">
+        <h3>Thordak</h3>
+        <p>O Rei das Cinzas, um dragão vermelho colossal e líder do Conclave.</p>
+      </div>
+      <div class="card">
+        <img src="Raishan.webp" alt="Raishan">
+        <h3>Raishan</h3>
+        <p>A Dragão Verde conhecida pela inteligência, manipulação e magia poderosa.</p>
+      </div>
+      <div class="card">
+        <img src="Vorugal.webp" alt="Vorugal">
+        <h3>Vorugal</h3>
+        <p>Um dragão branco gigantesco que transforma tudo ao seu redor em gelo.</p>
+      </div>
+      <div class="card">
+        <img src="Umbrasyl.webp" alt="Umbrasyl">
+        <h3>Umbrasyl</h3>
+        <p>O Dragão Negro conhecido por sua força e por acumular tesouros imensos.</p>
+      </div>
+    </div>
+  </section>
 
-Exandria é um mundo de fantasia criado por Matthew Mercer para as campanhas de Critical Role. O continente de Tal'Dorei abriga reinos antigos, florestas encantadas, cidades monumentais, deuses, criaturas mágicas e alguns dos heróis mais famosos do mundo.
+  <section id="curiosidades">
+    <h2>Curiosidades</h2>
+    <ul>
+      <li>A animação é baseada nas campanhas de RPG de Critical Role.</li>
+      <li>Todos os protagonistas foram criados pelos próprios jogadores da mesa.</li>
+      <li>A primeira temporada foi financiada por uma campanha histórica no Kickstarter.</li>
+      <li>Matthew Mercer criou praticamente toda a história de Exandria.</li>
+      <li>Os Vestígios da Divergência foram criados pelos próprios deuses.</li>
+      <li>Vox Machina significa "A Voz da Máquina".</li>
+    </ul>
+  </section>
 
-</p>
-
-<img src="MapaExandria.webp" alt="Mapa de Exandria">
-        <div class="citacao">
-
-"A história jamais pertence aos reis, mas àqueles que tiveram coragem de desafiar dragões."
-
-<br><br>
-
-<span>
-— Arquivos Reais da Biblioteca de Emon
-</span>
-
-</div>
-
-</section>
-    <section id="taldorei">
-
-<h2>Tal'Dorei</h2>
-
-<p>
-
-Tal'Dorei é um dos continentes mais importantes de Exandria. Suas cidades, castelos, montanhas e florestas foram palco das maiores aventuras da Vox Machina. Entre seus locais mais famosos estão Emon, Whitestone, Westruun e Zephrah.
-
-</p>
-
-<img src="TalDorei.webp" alt="Continente de Tal'Dorei">
-
-</section>
-    <section id="reinos">
-
-<h2>Grandes Reinos de Tal'Dorei</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<img src="Emon.webp">
-
-<h3>Emon</h3>
-
-<p>
-
-Capital de Tal'Dorei e maior cidade do continente. Abriga o Castelo de Emon e a famosa Biblioteca Real.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="Whitestone.webp">
-
-<h3>Whitestone</h3>
-
-<p>
-
-Cidade governada pela família de Percy. Tornou-se símbolo de resistência após derrotar os Briarwood.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="Westruun.webp">
-
-<h3>Westruun</h3>
-
-<p>
-
-Cidade guerreira que sofreu intensamente durante o ataque do Conclave Cromático.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="Zephrah.webp">
-
-<h3>Zephrah</h3>
-
-<p>
-
-Lar dos Ashari do Ar e residência de Keyleth.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-    <section id="personagens">
-
-<h2>Vox Machina</h2>
-
-<div class="cards">
-    <div class="card">
-
-<img src="imagens/Vex'ália2.webp" alt="Vex">
-
-<h3>Vex'ahlia</h3>
-
-<p>
-Caçadora, arqueira e uma das fundadoras da Vox Machina.
-</p>
+  <section id="linha-tempo">
+    <h2>Linha do Tempo</h2>
+    <p>Os acontecimentos abaixo resumem os principais eventos da jornada da Vox Machina.</p>
+    <div class="timeline">
+      <div class="evento">
+        <div class="ano">1</div>
+        <div class="conteudo">
+          <h3>Formação da Vox Machina</h3>
+          <p>O grupo de aventureiros passa a trabalhar junto e aceita missões por todo Tal'Dorei.</p>
         </div>
-    <div class="card">
-
-<img src="imagens/Vaxildan2.webp" alt="Vax">
-
-<h3>Vax'ildan</h3>
-
-<p>
-Ladino extremamente rápido e irmão gêmeo de Vex.
-</p>
-
-</div>
-    <div class="card">
-
-<img src="Keyleth2.png" alt="Keyleth">
-
-<h3>Keyleth</h3>
-
-<p>
-Druida dos Ashari que domina os elementos da natureza.
-</p>
-
-</div>
-    <div class="card">
-
-<img src="imagens/Percy2.png" alt="Percy">
-
-<h3>Percy</h3>
-
-<p>
-Lorde de Whithestone.
-</p>
-
-</div>
-    <div class="card">
-
-<img src="imagens/Pike2.png" alt="Pike">
-
-<h3>Pike</h3>
-
-<p>
-Clériga do Vox Machina.
-</p>
-
-</div>
-    <div class="card">
-
-<img src="imagens/Scanlan2.png" alt="Scanlan">
-
-<h3>Scanlan</h3>
-
-<p>
-Um bardo bem humorado.
-</p>
-
-</div>
-    <div class="card">
-
-<img src="imagens/Grok2.png" alt="Grog">
-
-<h3>Grog</h3>
-
-<p>
-Um grande guerreiro que portará as manoplas.
-</p>
-
-</div>
-
-</div>
-
-</section>
-    <section id="vestigios">
-
-<h2>Vestígios da Divergência</h2>
-
-<p>
-
-Os Vestígios da Divergência são artefatos lendários criados pelos deuses durante a Guerra da Divergência. Cada um concede poderes extraordinários ao seu portador e desempenhou um papel essencial na luta da Vox Machina contra o Conclave Cromático.
-
-</p>
-
-<div class="cards">
-
-<div class="card">
-
-<img src="DeathwalkersWard.webp" alt="Deathwalker's Ward">
-
-<h3>Deathwalker's Ward</h3>
-
-<p>
-Armadura sagrada da Matrona dos Corvos utilizada por Vax'ildan.
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="Fenthras.webp" alt="Fenthras">
-
-<h3>Fenthras</h3>
-
-<p>
-Arco mágico utilizado por Vex'ahlia que dispara flechas encantadas.
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="TitanstoneKnuckles.webp" alt="Titanstone Knuckles">
-
-<h3>Titanstone Knuckles</h3>
-
-<p>
-Manoplas ancestrais que aumentam enormemente a força física de Grog.
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="Mythcarver.webp" alt="Mythcarver">
-
-<h3>Mythcarver</h3>
-
-<p>
-Espada lendária que amplifica o poder mágico e inspira aliados.
-</p>
-
-</div>
-    <section id="conclave">
-
-<h2>Conclave Cromático</h2>
-
-<p>
-
-Após a queda dos Briarwood, quatro dragões ancestrais atacam Tal'Dorei ao mesmo tempo. Unidos sob o nome de Conclave Cromático, eles conquistam cidades inteiras e quase destroem Exandria.
-
-</p>
-
-<div class="cards">
-
-<div class="card">
-
-<img src="Thordak.webp" alt="Thordak">
-
-<h3>Thordak</h3>
-
-<p>
-O Rei das Cinzas, um dragão vermelho colossal e líder do Conclave.
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="Raishan.webp" alt="Raishan">
-
-<h3>Raishan</h3>
-
-<p>
-A Dragão Verde conhecida pela inteligência, manipulação e magia poderosa.
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="Vorugal.webp" alt="Vorugal">
-
-<h3>Vorugal</h3>
-
-<p>
-Um dragão branco gigantesco que transforma tudo ao seu redor em gelo.
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="Umbrasyl.webp" alt="Umbrasyl">
-
-<h3>Umbrasyl</h3>
-
-<p>
-O Dragão Negro conhecido por sua força e por acumular tesouros imensos.
-</p>
-
-</div>
-    <section id="curiosidades">
-
-<h2>Curiosidades</h2>
-
-<ul>
-
-<li>A animação é baseada nas campanhas de RPG de Critical Role.</li>
-
-<li>Todos os protagonistas foram criados pelos próprios jogadores da mesa.</li>
-
-<li>A primeira temporada foi financiada por uma campanha histórica no Kickstarter.</li>
-
-<li>Matthew Mercer criou praticamente toda a história de Exandria.</li>
-
-<li>Os Vestígios da Divergência foram criados pelos próprios deuses.</li>
-
-<li>Vox Machina significa "A Voz da Máquina".</li>
-
-</ul>
-
-</section>
-
-</div>
-
-</section>
-
-</div>
-
-</section>
-    <section id="linha-tempo">
-
-<h2>Linha do Tempo</h2>
-
-<p>
-
-Os acontecimentos abaixo resumem os principais eventos da jornada da Vox Machina.
-
-</p>
-
-<div class="timeline">
-
-<div class="evento">
-<div class="ano">1</div>
-
-<div class="conteudo">
-<h3>Formação da Vox Machina</h3>
-
-<p>
-O grupo de aventureiros passa a trabalhar junto e aceita missões por todo Tal'Dorei.
-</p>
-
-</div>
-</div>
-
-<div class="evento">
-<div class="ano">2</div>
-
-<div class="conteudo">
-<h3>Os Briarwood</h3>
-
-<p>
-Percy retorna para Whitestone e enfrenta Lord e Lady Briarwood ao lado de seus amigos.
-</p>
-
-</div>
-</div>
-
-<div class="evento">
-<div class="ano">3</div>
-
-<div class="conteudo">
-<h3>Conclave Cromático</h3>
-
-<p>
-Quatro dragões ancestrais conquistam Tal'Dorei e obrigam a Vox Machina a procurar os Vestígios da Divergência.
-</p>
-
-</div>
-</div>
-
-<div class="evento">
-<div class="ano">4</div>
-
-<div class="conteudo">
-<h3>Caçada aos Vestígios</h3>
-
-<p>
-Cada membro conquista artefatos lendários capazes de enfrentar os dragões.
-</p>
-
-</div>
-</div>
-
-<div class="evento">
-<div class="ano">5</div>
-
-<div class="conteudo">
-<h3>Batalha Final</h3>
-
-<p>
-Após inúmeras batalhas, a Vox Machina derrota o Conclave Cromático e salva Tal'Dorei.
-</p>
-
-</div>
-</div>
-
-</div>
-
-</section>
-    <section>
-
-<div class="citacao">
-
-"A verdadeira força não nasce das armas, mas daqueles que escolhem proteger o mundo mesmo diante do impossível."
-
-<span>
-— Arquivos da Biblioteca de Emon
-</span>
-
-</div>
-
-</section>
+      </div>
+      <div class="evento">
+        <div class="ano">2</div>
+        <div class="conteudo">
+          <h3>Os Briarwood</h3>
+          <p>Percy retorna para Whitestone e enfrenta Lord e Lady Briarwood ao lado de seus amigos.</p>
+        </div>
+      </div>
+      <div class="evento">
+        <div class="ano">3</div>
+        <div class="conteudo">
+          <h3>Conclave Cromático</h3>
+          <p>Quatro dragões ancestrais conquistam Tal'Dorei e obrigam a Vox Machina a procurar os Vestígios da Divergência.</p>
+        </div>
+      </div>
+      <div class="evento">
+        <div class="ano">4</div>
+        <div class="conteudo">
+          <h3>Caçada aos Vestígios</h3>
+          <p>Cada membro conquista artefatos lendários capazes de enfrentar os dragões.</p>
+        </div>
+      </div>
+      <div class="evento">
+        <div class="ano">5</div>
+        <div class="conteudo">
+          <h3>Batalha Final</h3>
+          <p>Após inúmeras batalhas, a Vox Machina derrota o Conclave Cromático e salva Tal'Dorei.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="citacao">
+      "A verdadeira força não nasce das armas, mas daqueles que escolhem proteger o mundo
+      mesmo diante do impossível."
+      <span>— Arquivos da Biblioteca de Emon</span>
+    </div>
+  </section>
 
 </main>
-    <footer>
 
-<h3>Biblioteca de Emon</h3>
-
-<p>
-
-Projeto inspirado em The Legend of Vox Machina, Critical Role e no universo de Exandria.
-
-</p>
-
-<p>
-
-Todos os personagens e cenários pertencem aos seus respectivos criadores.
-
-</p>
-
+<footer>
+  <h3>Biblioteca de Emon</h3>
+  <p>Projeto inspirado em The Legend of Vox Machina, Critical Role e no universo de Exandria.</p>
+  <p>Todos os personagens e cenários pertencem aos seus respectivos criadores.</p>
 </footer>
+
+</body>
+</html>
